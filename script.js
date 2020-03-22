@@ -2,9 +2,9 @@
 var startButton = document.getElementById('start-button')
 var timerSeconds = document.querySelector('.timer')
 
-var mainContainer = document.getElementById('container')
-var quizContainer = document.getElementById('quiz-container')
-var innerContainer = document.querySelector('col-md-6')
+//var mainContainer = document.getElementById('container')
+var questionContainer = document.getElementById('question-container')
+var startContainer = document.getElementById('start-container')
 
 
 var countdownSeconds = 10;
@@ -40,9 +40,11 @@ function showQuiz () {
 //Start quiz function
 function startQuiz() {
     console.log("Quiz started");
-    mainContainer.textContent = "";
+    startContainer.classList.add('hide');
+    questionContainer.classList.remove('hide');
+    //mainContainer.textContent = "";
     setTime();
-    showQuiz();
+
 }
 
 
