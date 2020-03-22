@@ -1,37 +1,48 @@
 //DOM queries
 var startButton = document.getElementById('start-button')
-//var startContainer = document.getElementById('start-container')
 var timerSeconds = document.querySelector('.timer')
 
-var countdownSeconds = 50;
+var mainContainer = document.getElementById('container')
+var quizContainer = document.getElementById('quiz-container')
+var innerContainer = document.querySelector('col-md-6')
 
 
+var countdownSeconds = 10;
+
+// Function creating countdown timer
 function setTime() {
     var timerInterval = setInterval(function() {
       countdownSeconds--;
       timerSeconds.textContent = countdownSeconds + " seconds remaining";
   
-      if(secondsLeft === 0) {
+      if(countdownSeconds === 0) {
         clearInterval(timerInterval);
-        sendMessage();
+        //quizOver();
+        return
       }
+    
   
     }, 1000);
-  }
-//function setTime() {
-    //var timerInterval = setInterval(Function()) {
-        //timerSeconds.textContent = countdownSeconds
-    //}
-//}
+
+}
+
+
+
 //When start button is clicked...
 startButton.addEventListener('click', startQuiz)
+
+//Function to display quiz container
+function showQuiz () {
+    document.getElementById('quiz-container').style.diplay="block";
+}
 
 
 //Start quiz function
 function startQuiz() {
     console.log("Quiz started");
-    document.getElementById("start-container").innerHTML = "";
+    mainContainer.textContent = "";
     setTime();
+    showQuiz();
 }
 
 

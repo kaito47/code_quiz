@@ -5,42 +5,59 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./style.css">
+    
+      <!-- CSS -->
+      <link rel="stylesheet" href="./style.css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 
     <title>Coding Quiz!</title>
   </head>
   <body>
     <!-- Countdown Timer -->
     <div class = "timer"></div>
+    <!--<div class = "popup"></div>
     
     
-    <!--Start Quiz Card-->
-    <div ID = "start-container">
+    
+    <!-Quiz Card-->
+    <div ID = "container">
         <div class = "col-md-6">
             <h1 class="card-title">Coding Quiz</h1>
-            <br></br>
-            <p class="card-text">Welcome! This quiz will require you to answer five questions about coding in 30 seconds. Click on the best answer to submit it. For every wrong answer you will have 5 seconds subtracted from your remaining time.</p>
+            <p class="card-text">Welcome! This quiz will require you to answer five questions about coding in 50 seconds. Click on the best answer to submit it. For every wrong answer you will have 5 seconds subtracted from your remaining time.</p>
             <h6 class="card-subtitle mb-2 text-muted">Best of luck!</h6>
-            <br></br>
             <!-- Start Quiz Button -->    
             <button type="button" class="btn btn-info" ID = "start-button">Start Quiz</button>
+            </div>
         </div>
+        <div class = container>
+          <div id = "question-container" class = "hide">
+              <div id = "question">Question</div>
+              <div id = "answer-buttons"></div>
+              <button class = "btn">Answer 1</button>
+              <button class = "btn">Answer 2</button>
+              <button class = "btn">Answer 3</button>
+              <button class = "btn">Answer 4</button>
+              <div class = "commands">
+                  <button id = "next-btn" class = "next-btn btn hide">Next</button>
+              </div>
+          </div>
+      </div>
     </div>
 
+    
     <!--Quiz Card-->
     <div ID = "quiz-container" style = "display: none;">
-        <div class = "col-md-6">
-            <h1 class="card-title">Coding Quiz</h1>
-            <br></br>
-            <p class="card-text">Welcome! This quiz will require you to answer five questions about coding in 30 seconds. Click on the best answer to submit it. For every wrong answer you will have 5 seconds subtracted from your remaining time.</p>
-            <h6 class="card-subtitle mb-2 text-muted">Best of luck!</h6>
-            <br></br>
-        </div>
-    </div>
+      <div class = "col-md-6">
+          <h1 class="card-title">Coding Quiz</h1>
+          <br></br>
+          <p class="card-text">Welcome! This quiz will require you to answer five questions about coding in 30 seconds. Click on the best answer to submit it. For every wrong answer you will have 5 seconds subtracted from your remaining time.</p>
+          <h6 class="card-subtitle mb-2 text-muted">Best of luck!</h6>
+          <br></br>
+      </div>
+  </div>
 
     
 

@@ -2,7 +2,7 @@
 .col-md-6 {
     margin: auto;
     position: absolute;
-    margin-top: 100px;
+    margin-top: 200px;
     text-align: center;
    
 }
@@ -13,3 +13,6 @@
     font-weight: bold;
 }
 
+.hide {
+    display: none; 
+}
