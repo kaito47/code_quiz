@@ -6,6 +6,8 @@ var timerSeconds = document.querySelector('.timer')
 var questionContainer = document.getElementById('question-container')
 var startContainer = document.getElementById('start-container')
 
+var questionElement = document.getElementById('question')
+var answerButtons = document.getElementById('answer-buttons')
 
 var countdownSeconds = 10;
 
@@ -27,7 +29,6 @@ function setTime() {
 }
 
 
-
 //When start button is clicked...
 startButton.addEventListener('click', startQuiz)
 
@@ -44,8 +45,25 @@ function startQuiz() {
     questionContainer.classList.remove('hide');
     //mainContainer.textContent = "";
     setTime();
+    nextQuestion();
 
 }
 
+let questions = [
+    {q1: "What ion is important in neural transmission",
+    answer: [boron, sodium, helium, hydrogen]},
+
+    {q2: "What type of transmission is based on frequency fluctuations?",
+    answer: [spatial, occipital, temporal, nocturnal]},
+
+    {q3: "What type of transmission is based on frequency fluctuations?",
+    answer: [spatial, occipital, temporal, nocturnal]},
+
+    {q4: "What type of transmission is based on frequency fluctuations?",
+    answer: [spatial, occipital, temporal, nocturnal]},
+
+    {q5: "What type of transmission is based on frequency fluctuations?",
+    answer: [spatial, occipital, temporal, nocturnal]},
+]
 
 //document.querySelector("body > div > div.timer")
