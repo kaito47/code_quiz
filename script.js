@@ -27,7 +27,13 @@ function setTime() {
     }, 1000);
 
 }
-
+// Making next question function
+//function nextQuestion(questionArray) {
+    //document.getElementById('question').innerText = questionArray[0][0].question
+   //questionElement.innerText = questionArray(questionArrayIndex[0])
+   //questionArrayIndex++;
+   // answerButtons = questionArray.answer
+//}
 
 //When start button is clicked...
 startButton.addEventListener('click', startQuiz)
@@ -37,33 +43,46 @@ function showQuiz () {
     document.getElementById('quiz-container').style.diplay="block";
 }
 
+//Function to show one question
+//function showQuestion () {
+    //questionElement.textContent = "Hi";
+//}
 
 //Start quiz function
 function startQuiz() {
     console.log("Quiz started");
     startContainer.classList.add('hide');
     questionContainer.classList.remove('hide');
+    var questionArrayIndex = 0;
     //mainContainer.textContent = "";
     setTime();
-    nextQuestion();
+    //nextQuestion();
+    showQuestion();
 
 }
 
-let questions = [
-    {q1: "What ion is important in neural transmission",
-    answer: [boron, sodium, helium, hydrogen]},
+let questionArray = [
+    {question: "What ion is important in neural transmission",
+    answer: [{text: "boron", correct = false},
+            {text: "sodium", correct = true},
+            {text: "helium", correct = false},
+            {text: "hydrogen", correct = false}]},
 
-    {q2: "What type of transmission is based on frequency fluctuations?",
-    answer: [spatial, occipital, temporal, nocturnal]},
+    {question: "What type of transmission is based on frequency fluctuations?",
+    answer: ["spatial", "occipital", "temporal", "nocturnal"]},
 
-    {q3: "What type of transmission is based on frequency fluctuations?",
-    answer: [spatial, occipital, temporal, nocturnal]},
+    {question: "What type of transmission is based on frequency fluctuations?",
+    answer: ["spatial", "occipital", "temporal", "nocturnal"]},
 
-    {q4: "What type of transmission is based on frequency fluctuations?",
-    answer: [spatial, occipital, temporal, nocturnal]},
+    {question: "What type of transmission is based on frequency fluctuations?",
+    answer: ["spatial", "occipital", "temporal", "nocturnal"]},
 
-    {q5: "What type of transmission is based on frequency fluctuations?",
-    answer: [spatial, occipital, temporal, nocturnal]},
+    {question: "What type of transmission is based on frequency fluctuations?",
+    answer: ["spatial", "occipital", "temporal", "nocturnal"]},
 ]
 
-//document.querySelector("body > div > div.timer")
+// Making next question function
+//function nextQuestion(questionArray) {
+    //questionElement.textContent.questionArray.question
+    //answerButtons = questionArray.answer
+
