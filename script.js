@@ -11,6 +11,25 @@ var answerButtons = document.getElementById('answer-buttons')
 
 var countdownSeconds = 10;
 
+var questionArray = [
+    {question: "What ion is important in neural transmission?",
+   answer: [{text: "boron", correct: false},
+            {text: "sodium", correct: true},
+            {text: "helium", correct: false},
+            {text: "hydrogen", correct: false}]},
+
+    {question: "What type of transmission is based on frequency fluctuations?",
+   answer: ["spatial", "occipital", "temporal", "nocturnal"]},
+
+    {question: "What type of transmission is based on frequency fluctuations?",
+    answer: ["spatial", "occipital", "temporal", "nocturnal"]},
+
+   {question: "What type of transmission is based on frequency fluctuations?",
+   answer: ["spatial", "occipital", "temporal", "nocturnal"]},
+
+    {question: "What type of transmission is based on frequency fluctuations?",
+    answer: ["spatial", "occipital", "temporal", "nocturnal"]},
+]
 // Function creating countdown timer
 function setTime() {
     var timerInterval = setInterval(function() {
@@ -27,10 +46,11 @@ function setTime() {
     }, 1000);
 
 }
+let question1 = "What's your name?"
 // Making next question function
-//function nextQuestion(questionArray) {
-    //document.getElementById('question').innerText = questionArray[0][0].question
-   //questionElement.innerText = questionArray(questionArrayIndex[0])
+//function nextQuestion(parameters) {
+    questionContainer.innerText = question1
+   //questionElement.innerText = questionArray(questionArrayIndex[0]) - Didn't work
    //questionArrayIndex++;
    // answerButtons = questionArray.answer
 //}
@@ -38,48 +58,22 @@ function setTime() {
 //When start button is clicked...
 startButton.addEventListener('click', startQuiz)
 
-//Function to display quiz container
-function showQuiz () {
-    document.getElementById('quiz-container').style.diplay="block";
-}
 
-//Function to show one question
-//function showQuestion () {
-    //questionElement.textContent = "Hi";
-//}
 
 //Start quiz function
 function startQuiz() {
     console.log("Quiz started");
     startContainer.classList.add('hide');
     questionContainer.classList.remove('hide');
-    var questionArrayIndex = 0;
-    //mainContainer.textContent = "";
+   // var questionArrayIndex = 0;
     setTime();
-    //nextQuestion();
-    showQuestion();
+    nextQuestion();
+    //showQuestion();
 
 }
 
-let questionArray = [
-    {question: "What ion is important in neural transmission",
-    answer: [{text: "boron", correct = false},
-            {text: "sodium", correct = true},
-            {text: "helium", correct = false},
-            {text: "hydrogen", correct = false}]},
+//var question1 = "What ion is important in neural transmission?"
 
-    {question: "What type of transmission is based on frequency fluctuations?",
-    answer: ["spatial", "occipital", "temporal", "nocturnal"]},
-
-    {question: "What type of transmission is based on frequency fluctuations?",
-    answer: ["spatial", "occipital", "temporal", "nocturnal"]},
-
-    {question: "What type of transmission is based on frequency fluctuations?",
-    answer: ["spatial", "occipital", "temporal", "nocturnal"]},
-
-    {question: "What type of transmission is based on frequency fluctuations?",
-    answer: ["spatial", "occipital", "temporal", "nocturnal"]},
-]
 
 // Making next question function
 //function nextQuestion(questionArray) {
